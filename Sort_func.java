@@ -140,5 +140,5 @@ public class Sort_func {
         System.out.println(">Enter type of Sort: 1 - for Bubble sort, 2 - for Insertion sort, 3 - for Selection sort, 4 - Shell sort, 5 - Quick sort");
         return in.nextInt();
     }
-    //TODO ComparingSort,  
+    //TODO ComparingSort  
 }
