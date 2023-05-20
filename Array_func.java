@@ -74,10 +74,10 @@ public class Array_func {
         System.out.println("Array jwith asterixes: ");
         for (int i = 0; i<array.length; i++) {
             if (i==min||i==max) {
-                System.out.format("*%7d",array[i]);
+                System.out.format("\u001b[32m%9d*\u001b[0m",array[i]);
             }
             else {
-                System.out.format(" %7d", array[i]);
+                System.out.format(" %9d", array[i]);
             }
             if (i%10==9)System.out.println();
         }
