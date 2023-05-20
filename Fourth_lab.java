@@ -12,19 +12,24 @@ public class Fourth_lab {
             int array_size = Array_func.arraySizeInput(in);
             array = Array_func.randomArray(array_size, -10000, 10000);
             Array_func.fillFile(filename, array);
-            Array_func.showArray(array);
         }
+        Array_func.showArray(array);
         System.out.println("Enter key...");
         int key = in.nextInt();
         int key_seq = searchSequential(array,key);
-        Sort_func.sortBubble(array);
-        Array_func.showArray(array);
-        int kk = searchBinary(array,key);
-        int kkk = searchInterpolation(array,key);
-        System.out.println("Key Sequential: " + key_seq);
-        System.out.println("Key Binary: " + kk);
-        System.out.println("Key Interpolation: " + kkk);
-        Array_func.showArrayAsterix(array, kk, kkk);
+        if (key_seq==-1){
+            System.out.println("Key : " + key + " not found...");
+        }
+        else {
+            Sort_func.sortBubble(array);
+            Array_func.showArray(array);
+            int kk = searchBinary(array,key);
+            int kkk = searchInterpolation(array,key);
+            System.out.println("Key Sequential: " + key_seq);
+            System.out.println("Key Binary: " + kk);
+            System.out.println("Key Interpolation: " + kkk);
+            Array_func.showArrayAsterix(array, kk, kkk);
+        }
     }
 
     public static int searchSequential(int[] array, int key){
